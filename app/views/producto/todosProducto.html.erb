@@ -1,0 +1,23 @@
+<br>
+<h3>Catalogo de productos</h3>
+<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th>Nombre del producto</th>
+				<th>Precio</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @todosProducto.each do |producto| %>
+			<tr>
+				<td> <%= producto.nombre %> </td>
+				<td> <%= producto.precio %> </td>
+				<td><a href="/producto/eliminarProducto/<%= producto.id %>" class="btn-warning">Eliminar</a></td>
+				<td><a href="/producto/mostrarProducto/<%= producto.id %>" class="btn-success">Modificar</a></td>
+			</tr>
+			<% end %>
+		</tbody>
+</table>
+<a class="btn-info"  href="/producto/nuevoProducto">Agregar Nuevo Producto</a>

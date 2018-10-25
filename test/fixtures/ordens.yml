@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  unidad: 1
+  cliente: one
+  producto: one
+
+two:
+  unidad: 1
+  cliente: two
+  producto: two

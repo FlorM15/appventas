@@ -1,0 +1,24 @@
+	<br>
+	<h3>Catalogo de clientes</h3>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th>RFC</th>
+				<th>Nombre</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @todosClientes.each do |cliente| %>
+			<tr>
+				<td> <%= cliente.rfc %> </td>
+				<td> <%= cliente.nombre_cliente %> </td>
+				<td><a href="/cliente/eliminarCliente/<%= cliente.id %>" class="btn-warning">Eliminar</a></td>
+				<td><a href="/cliente/mostrarCliente/<%= cliente.id %>" class="btn-success">Modificar</a></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<a class="btn-info" href="/cliente/nuevoCliente">Agregar Nuevo Cliente</a>

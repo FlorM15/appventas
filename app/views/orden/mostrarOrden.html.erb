@@ -1,0 +1,21 @@
+<form method="post" action="/orden/modificarOrden/<%=@orden.id%>">
+	<%= token_tag nil %>
+	<label>Selecciona cliente</label> 
+	<select name="id_cliente"> 
+        <% @todosClientes.each do |cliente| %>
+        <option value="<%=cliente.id%>"><%=cliente.nombre_cliente%></option>
+        <%end%>
+    </select>
+	<br>
+    <label>Selecciona producto</label> 
+    <select name="id_producto"> 
+        <% @todosProductos.each do |producto| %>
+        <option value="<%=producto.id%>"><%=producto.nombre%></option>
+        <%end%>
+    </select>
+    <br>
+    <label>Unidades</label> 
+    <input type="number" value="<%=@orden.unidad%>" name="unidad">
+    <br>
+	<input type="submit" name="">
+</form>

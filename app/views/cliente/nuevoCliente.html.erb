@@ -1,0 +1,15 @@
+<form role="form" method="post" action="/cliente/crearCliente">
+	<%= token_tag nil %>
+        <br style="clear:both">
+                    <h3 style="margin-bottom: 25px; text-align: center;">Nuevo Cliente</h3>
+    				<div class="form-group">
+    					<label>RFC</label>
+						<input type="text" class="form-control"  name="rfc"  required>
+					</div>
+					<div class="form-group">
+						<label>Nombre</label>
+						<input type="text" class="form-control"  name="nombre_cliente" required>
+					</div>
+            
+        <button type="submit" id="submit" name="submit" class="btn btn-primary pull-right">Guardar</button>
+        </form>

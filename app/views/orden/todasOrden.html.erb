@@ -1,0 +1,28 @@
+	<br>
+	<h3>Ventas realizadas</h3>
+	<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th>Cliente</th>
+				<th>Producto</th>
+				<th>Unidades</th>
+				<th>Total</th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @todasOrdenes.each do |orden|  %>
+			<tr>
+				<td> <%= orden.cliente.nombre_cliente%></td>
+                <td> <%= orden.producto.nombre %></td>
+				<td> <%= orden.unidad %></td>
+				<td> <%= orden.unidad * orden.producto.precio %></td>
+				<td><a href="/orden/eliminarOrden/<%= orden.id %>" class="btn-warning">Eliminar</a></td>
+				<td><a href="/orden/mostrarOrden/<%= orden.id %>" class="btn-success">Modificar</a></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<a class="btn-info"  href="/orden/nuevaOrden">Agregar Nueva Orden</a>
